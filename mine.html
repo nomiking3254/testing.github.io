@@ -41,7 +41,7 @@
     <a href="user-team.html"><img src="banner.png" alt="reffer to earn reward" class="banner" /></a>
 
 
-    <div class="fl" style="display: flex; justify-content: space-around;">
+    <div class="fl">
         <i class="fa fa-right-to-bracket a1"></i>
         <i class="fa fa-right-from-bracket a1"></i>
         <i class="fa fa-money-bill-trend-up a1"></i>
@@ -59,7 +59,7 @@
 
 
 
-    <div class="fl"></i>
+    <div class="fl">
 
         <i class="fa fa-user a2"></i>
         <i class="fa fa-wallet a2"></i>
@@ -107,6 +107,10 @@
             font-weight: bold;
             font-size: large;
         }
+        .fl {
+            display: flex;
+            margin: 1px;
+        }
 
         .a1 {
             -webkit-box-shadow: 8px 9px 6px 0px rgba(0, 0, 0, 0.75);
@@ -116,11 +120,11 @@
             font-size: x-large;
             color: white;
             background-color: red;
-            padding: 1vh;
+            padding: 1.5vh;
             border-radius: 100px;
             margin: 7%;
-            position: relative;
-            margin-top: 0px;
+            
+            z-index: 99;
 
         }
 
@@ -132,7 +136,7 @@
             font-size: x-large;
             color: white;
             background-color: red;
-            padding: 1vh;
+            padding: 1.5vh;
             border-radius: 100px;
             margin: 7%;
             position: relative;
@@ -148,8 +152,6 @@
             width: 95%;
             height: auto;
             margin-left: 2%;
-            top: 35%;
-            position: relative;
             z-index: -99;
         }
 
