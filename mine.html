@@ -18,9 +18,9 @@
 <body>
     <img src="logo.png" alt="logo" class="logo" />
     <div class="container">
-        <img src="card.png" class="card" />
+        <img src="card.png" class="card" style="z-index: 99999;"/>
         <div class="one">
-            <h6>BALANCE</h6>
+            <h6>TOTAL BALANCE</h6>
         </div>
         <div class="two">
             <h6>TOTAL INCOME</h6>
@@ -48,10 +48,10 @@
         <i class="fa fa-share-nodes a1"></i>
     </div>
    <div class="tex" style="display: flex;">
-        <span style="margin-left: 7%; font-size: small;">ACCOUNT</span>
-        <span style="margin-left: 10%; font-size: small;">INVEST</span>
-        <span style="margin-left: 14%; font-size: small;">BILL</span>
-        <span style="margin-left: 18%; font-size: small;">INVITE</span>
+        <span style="margin-left: 5%; font-size: small;">ACCOUNT</span>
+        <span style="margin-left: 8%; font-size: small;">INVEST</span>
+        <span style="margin-left: 15%; font-size: small;">BILL</span>
+        <span style="margin-left: 15%; font-size: small;">INVITE</span>
     </div>
 
 
@@ -67,10 +67,10 @@
      
     </div>
     <div class="tex" style="display: flex; margin-top: 1%">
-        <span style="margin-left: 7%; font-size: small;">SERVICE</span>
-        <span style="margin-left: 13%; font-size: small;">ABOUT</span>
-        <span style="margin-left: 10%; font-size: small;">DOWNLOAD</span>
-        <span style="margin-left: 8%; font-size: small;">LOGOUT</span>
+        <span style="margin-left: 5%; font-size: small;">SERVICE</span>
+        <span style="margin-left: 10%; font-size: small;">ABOUT</span>
+        <span style="margin-left: 9%; font-size: small;">DOWNLOAD</span>
+        <span style="margin-left: 5%; font-size: small;">LOGOUT</span>
     </div>
 
 
@@ -118,7 +118,7 @@
             box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
             font-size: x-large;
             color: white;
-            background-color: red;
+            background-color: black;
             padding: 1.5vh;
             border-radius: 100px;
             margin: 7%;
@@ -134,7 +134,7 @@
             box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
             font-size: x-large;
             color: white;
-            background-color: red;
+            background-color: black;
             padding: 1.5vh;
             border-radius: 100px;
             margin: 7%;
@@ -151,7 +151,7 @@
             width: 95%;
             height: auto;
             margin-left: 2%;
-            z-index: -99;
+            z-index: -999;
         }
 
         .logo {
@@ -169,13 +169,13 @@
         .container .card {
             width: 100%;
             display: block;
-            margin: 0 2% 0% 0%;
+            margin: 3% 2% 0% 0%;
         }
 
         .one {
             position: absolute;
             top: 15%;
-            left: 20%;
+            left: 15%;
             font-weight: Bold;
             color: white;
         }
@@ -183,35 +183,35 @@
         .two {
             position: absolute;
             top: 15%;
-            left: 50%;
+            right: 15%;
             color: white;
         }
 
 
         .four {
             position: absolute;
-            top: 1%;
+            top: 5%;
             left: 25%;
             color: white;
         }
 
         .five {
             position: absolute;
-            top: 1%;
-            left: 60%;
+            top: 5%;
+            right: 25%;
             color: white;
         }
 
         .tex {
-            color: red;
+            color: black;
             font-weight: bolder;
         }
 
 
         .seven {
             position: absolute;
-            bottom: 30%;
-            left: 28%;
+            bottom: 23%;
+            left: 20%;
             color: white;
             font-size: small;
         }
@@ -220,7 +220,7 @@
             position: absolute;
              font-size: small;
             bottom: 30%;
-            left: 60%;
+            left: 58%;
             color: white;
         }
     </style>
