@@ -1,0 +1,278 @@
+
+<head>
+  <link rel="stylesheet" href="{% static './css/recharge.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  /*
+  {% extends 'user_base.html' %}
+{% load static %}
+{% block title %} Recharge{% endblock %}
+
+{% block content %}
+*/
+  .amount-button,
+  .recharge-input {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+
+  .amount-button:hover,
+  .recharge-input:hover {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+  }
+
+  .register-button:hover:hover {
+    background-color: greenyellow;
+
+  }
+
+  .container {
+    max-width: 800px;
+    /* margin: 0 auto; */
+    padding: 0px 10px;
+  }
+
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .back-arrow {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .total-amount {
+    font-size: 24px;
+    color: white;
+  }
+
+  .recharge-section {
+    margin-bottom: 20px;
+  }
+
+  .recharge-label {
+    font-size: 20px;
+    color: white;
+  }
+
+  .recharge-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .amount-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .amount-button {
+
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(13, 3, 93, 0.71);
+    /* font-size: 14px; */
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    /* min-width: 100px; */
+    text-align: start;
+  }
+
+  .amount-button:last-child {
+    margin-right: 0;
+  }
+
+  .amount-button:hover {
+    background-color: #f5f5f5;
+  }
+
+
+  .register-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-image: linear-gradient(109.6deg, rgb(218, 185, 252) 11.2%, rgb(125, 89, 252) 91.1%);
+    color: black;
+    border: none;
+    cursor: pointer;
+    border: 2px solid #eee;
+    border-radius: 10px;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    margin: 0%;
+  }
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+
+  #header-container {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  #header-card {
+    background-image: linear-gradient(109.6deg, rgb(218, 185, 252) 11.2%, rgb(125, 89, 252) 91.1%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+ 
+
+  .title-container {
+    flex-grow: 1;
+  }
+
+  .title {
+    font-weight: bold;
+    color: black;
+  }
+
+
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+    #header-container {
+      max-width: 750px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    #header-container {
+      max-width: 970px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #header-container {
+      max-width: 1170px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    #header-card {
+      height: 100px;
+      overflow: hidden;
+    }
+  }
+  
+</style>
+
+<body class="main-layout">
+  <div class="container">
+    <div class="header mt-3">
+      <div class="left-arrow col-2"><a style="color: black; font-weight: bold;" href="/"><i
+            class="fa-solid fa-arrow-left"></i></a></div>
+      <div class="recharge-label col-10" style="color: black; font-weight: bold;">Recharge</div>
+
+    </div>
+    <div class="container" id="header-container">
+      <div class="card p-2" id="header-card">
+        <div class="card-content">
+          <div class="title-container">
+            <h4 class="title">Balance</h4>
+            <h4 class="title">500</h4>
+          </div>
+          <div class="image-container">
+            <img src="depositPic.jpg" alt="Image" class="image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <label for=""><strong>Select Recharge Amount</strong></label>
+    <div class=" mt-2">
+      <div class="d-flex justify-content-between">
+      <div class="btn btn-lg btn-danger" onclick="setAmount(1000)"><h5><strong>1000</strong></h5></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(2000)"><h5><strong>2000</strong></h5></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(4000)"><h5><strong>4000</strong></h5></div>
+</div>   
+        
+      </div>
+      <div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(6000)"><h5><strong>6000</strong></h5></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(8000)"><h5><strong>8000</strong></h5></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(10000)"><h5><strong>10000</strong></h5></div>
+    </div>
+    <div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(20000)"><h5><strong>20000</strong></h5></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(50000)"><h6><strong>50000</strong></h6></div>
+      <div class="btn btn-lg btn-danger" onclick="setAmount(80000)"><h6><strong>80000</strong></h6></div>
+
+    </div>
+  </div>
+    <form method="POST" action="/recharge/" id="rechargeForm">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <!-- <div class="recharge-label">Recharge Amount:</div> -->
+      <div class="recharge-section mt-2">
+        <label for=""><strong>Recharge Amount</strong></label>
+        <input type="number" class="recharge-input no-arrow mt-2 mb-2" name="recharge_amount" placeholder="Enter amount"
+          required id="amountField">
+        <span id="error_message" style="display: none; color: red;font-size: 13px;" class="ml-4"></span>
+      </div>
+
+
+      <button class="register-button text_align_center" type="submit">Recharge</button>
+    </form>
+  </div>
+
+
+
+
+
+  <script>
+    var error_message = document.getElementById('error_message');
+    var amountField = document.getElementById('amountField');
+
+    amountField.onclick = function () {
+      error_message.style.display = 'none'
+    };
+
+    document.getElementById('rechargeForm').addEventListener('submit', function (event) {
+      var amountValue = amountField.value.trim();
+
+      if (amountValue < 1500) {
+        event.preventDefault(); // Prevent form submission
+        error_message.style.display = 'block';
+        error_message.textContent = "Deposit amount must be atleast Rs 1500";
+      }
+
+    });
+  </script>
+  <script>
+    function setAmount(amount) {
+      document.querySelector('.recharge-input').value = amount;
+    }
+  </script>
+</body>
