@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    <title>login</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,218 +10,257 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-
-<body>
-    <img src="logo.png" alt="logo" class="logo" />
-    <div class="container">
-        <img src="card.png" class="card" style="z-index: 99999;"/>
-        <div class="one">
-            <h6>ACCOUNT BALANCE</h6>
-        </div>
-        <div class="two">
-            <h6>TOTAL INCOME</h6>
-        </div>
-        <div class="four">
-            <h5>987</h5>
-        </div>
-        <div class="five">
-            <h5>895</h5>
-        </div>
-        <div class="seven">
-            <button style="border: 0px; background-color: transparent; padding: 1vh;">RECHARGE</button>
-        </div>
-        <div class="eight">
-            <button style=" background-color: transparent; border: 0px; padding: 1vh;">WITHDRAW</button>
-        </div>
-    </div>
-    <a href="user-team.html"><img src="banner.png" alt="reffer to earn reward" class="banner" /></a>
-
- 
-    <div class="fl" style="margin-left: 2%;">
-        <div style="text-align: center;"><i class="fa fa-wallet a1" style="margin-bottom: 10px;"></i></div>
-        <div style="text-align: center;"><i class="fa fa-wallet a1" style="margin-bottom: 10px;"></i></div>
-        <div style="text-align: center;"><i class="fa fa-wallet a1" style="margin-bottom: 10px;"></i></div>
-        <i class="fa fa-unlock-alt a1" style="margin-bottom: 10px;"></i>
-        <i class="fa fa-money-bill-trend-up a1" style="margin-bottom: 10px;"></i>
-        <i class="fa fa-clipboard a1" style="margin-bottom: 10px;"></i>
-    </div>
-   <div class="tex" style="display: flex; margin-left: 2%;">
-        <span style="margin-left: 3%; font-size: small;">ACCOUNT</span>
-        <span style="margin-left: 9%; font-size: small;">PASSWORDS</span>
-        <span style="margin-left: 13%; font-size: small;">BILL</span>
-        <span style="margin-left: 12%; font-size: small;">TUTORIAL</span>
-    </div>
-
-    <div class="fl">
-        <i class="fa fa-headset a2" style="margin-bottom: 10px;"></i>
-        <i class="fa fa-pen-to-square a2" style="margin-bottom: 10px;"></i>
-        <i class="fa fa-download a2" style="margin-bottom: 10px;"></i>
-        <i class="fa fa-right-from-bracket a2" style="margin-bottom: 10px;"></i>  
+<style>
+    /*  {% extends 'user_base.html' %}
+  {% load static %}
+  {% block title %} Home{% endblock %}
+  
+  {% block content %}
+  {% include 'intinal_popup.html' %}
+  
+      .bluid h2 {
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-weight: 600;
+      }
+  
      
-    </div>
-    <div class="tex" style="display: flex; margin-top: 0px; margin-left: 2%; ">
-        <span style="margin-left: 5%; font-size: small;">SERVICE</span>
-        <span style="margin-left: 13%; font-size: small;">ABOUT</span>
-        <span style="margin-left: 13%; font-size: small;">DOWNLOAD</span>
-        <span style="margin-left: 11%; font-size: small;">LOGOUT</span>
-    </div>
+  
+      .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.36);
+          color: #fff;
+          opacity: 1;
+          transition: opacity 0.3s ease;
+          border-radius: 20px;
+      }
+  
+      .overlay h2 {
+          font-size: 24px;
+          font-weight: 600;
+          text-align: center;
+          margin: 0;
+          padding: 10px;
+      }
+  
+      @media screen and (min-width: 768px) {
+          .container {
+              max-width: 750px;
+          }
+      }
+  
+      @media screen and (min-width: 992px) {
+          .container {
+              max-width: 970px;
+          }
+      }
+  
+      @media screen and (min-width: 1200px) {
+          .container {
+              max-width: 1170px;
+          }
+      }
+  
+      .btn-icon {
+          background: white;
+          height: 42px;
+          border-radius: 10px;
+          padding: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+  
+      .carousel-caption {
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          color: white !important;
+        
+          padding: 20px;
+          width: 100%;
+      }
+  */
+    @media screen and (max-width: 600px) {
+          .img_responsive {
+              width: 160px;
+          }
+  
+      }
+  
+      .invest_card_font {
+          font-size: 10px;
+      }
+  
+      @media(max-width: 320px) {
+          .invest_card_font {
+              font-size: 10px;
+          }
+      }
+  
+  
+      .image-container {
+          position: relative;
+          margin-left: 0;
+          margin-bottom: 30px;
+          border-radius: 30px;
+          margin-top: 33px;
+      }
+      .one {
+          position: absolute;
+          z-index: 999;
+          top: 61%;
+          left: 26%;
+          background-color: transparent;
+          border: 0px;
+          color: white;
+      }
+      .two {
+          position: absolute;
+          margin-left: 62%;
+          top: 61%;
+          background-color: transparent;
+          border: 0px;
+          color: white;
+      }
+      .three {
+          position: absolute;
+          top: 13%;
+          color: white;
+          left: 15%;
+      }
+      .four {
+          position: absolute;
+          top: 13%;
+          right: 10%;
+          color: white;
+      }
+      .five {
+          position: absolute;
+          color: white;
+          top: 0%;
+          left: 25%;
+      }
+      .six {
+          position: absolute;
+          color: white;
+          top: 0%;
+          right: 18%;
+      }
+  
+      .image-container img {
+          display: block;
+          width: 100%;
+          height: 180px;
+          border-radius: 10px;
+         
+      }
+  .fa {
+      color: white;
+      background-color: #CA0709;
+      padding: 3vh;
+      border-radius: 100px;
+      font-size: x-large;
+  }
+  </style>
+  
 
-
-    <div class="l" style="display: flex; margin-top: 5%;">
-        <i class="fa fa-volume-high"
-            style="color: white; margin-left: 5%; font-size: small; margin-top: 5%; background-color: red; padding: 1vh; border-radius: 100px;"></i>
-        <marquee direction="up" scrollamount="3"> user325******24 withdrawn Rs. 5000 on equipment</marquee>
-    </div>
-    <div class="l" style="display: flex;">
-        <i class="fa fa-volume-high"
-            style="color: white; margin-left: 5%; font-size: small; margin-top: 0%; background-color: red; padding: 1vh; border-radius: 100px;"></i>
-        <marquee direction="up" scrollamount="3"> user325******24 withdrawn Rs. 5000 on equipment</marquee>
-    </div>
-    <div class="l" style="display: flex;">
-        <i class="fa fa-volume-high"
-            style="color: white; margin-left: 5%; font-size: small; margin-top: 0%; background-color: red; padding: 1vh; border-radius: 100px;"></i>
-        <marquee direction="up" scrollamount="3"> user325******24 withdrawn Rs. 5000 on equipment</marquee>
-    </div>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
-
-        * {
-            box-sizing: border-box;
-            margin: 0%;
-            padding: 0%;
-        }
-
-        body {
-            font-size: 10px;
-        }
-
-        marquee {
-            font-weight: bold;
-            font-size: small;
-        }
-        .fl {
-            display: flex;
-            margin-bottom: 0px;
-        }
-
-        .a1 {
-            -webkit-box-shadow: 8px 9px 6px 0px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            font-size: x-large;
-            color: white;
-            background-color: black;
-            padding: 1.5vh;
-            border-radius: 100px;
-            margin: 7%;
-            z-index: 99;
-            margin-top: 7%;
-
-        }
-
-        .a2 {
-            -webkit-box-shadow: 8px 9px 6px 0px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.75);
-            font-size: x-large;
-            color: white;
-            background-color: black;
-            padding: 1.5vh;
-            border-radius: 100px;
-            margin: 7%;
-            position: relative;
-            margin-top: 15%;
-
-        }
-
-        .l {
-            margin-top: 5%;
-        }
-
-        .banner {
-            width: 98%;
-            height: auto;
-            margin-left: 2%;
-            z-index: -999;
-            margin-top: 5%;
-        }
-
-        .logo {
-            width: 25vw;
-            height: auto;
-            margin-top: 3%;
-        }
-
-        .container {
-            height: auto;
-            position: relative;
-            margin-top: 5%;
-        }
-
-        .container .card {
-            width: 100%;
-            display: block;
-            margin: 5% 0% 0% 0%;
-        }
-
-        .one {
-            position: absolute;
-            top: 20%;
-            left: 15%;
-            font-weight: Bold;
-            color: white;
-        }
-
-        .two {
-            position: absolute;
-            top: 20%;
-            right: 12%;
-            color: white;
-        }
-
-
-        .four {
-            position: absolute;
-            top: 10%;
-            left: 25%;
-            color: white;
-        }
-
-        .five {
-            position: absolute;
-            top: 10%;
-            right: 22%;
-            color: white;
-        }
-
-        .tex {
-            color: black;
-            font-weight: bolder;
-        }
-
-
-        .seven {
-            position: absolute;
-            bottom: 26%;
-            left: 26%;
-            color: white;
-            font-size: smaller;
-            font-weight: bolder;
-        }
-
-        .eight {
-            position: absolute;
-             font-size: smaller;
-             font-weight: bolder;
-            bottom: 26%;
-            right: 25%;
-            color: white;
-        }
-    </style>
-</body>
-
-</html>
+    </head>
+    <body>
+  <!-- body -->
+      <!-- Toast message 
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+          <div id="liveToast" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-body  text-white">
+                  You have insiffience balance.
+                  <button type="button" class="btn-close" style="float: right;" data-bs-dismiss="toast"
+                      aria-label="Close"></button>
+              </div>
+          </div>
+      </div>
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+          <div id="maxtoast" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-body  text-white">
+                  Maximium buy limit for this plan reached
+                  <button type="button" class="btn-close" style="float: right;" data-bs-dismiss="toast"
+                      aria-label="Close"></button>
+              </div>
+          </div>
+      </div>
+       -->
+  <!-- start slider section -->
+  <div class="logo">
+      <img src="logo.png" alt="highcool" style="width: 28%; height: auto;" />
+  </div>
+  <div class="image-container">
+  <img src="card.png" class="img-fluid img" alt="Responsive image" style="width: 100%; height: auto; margin: 5% 3%;">
+  <div class="invest-card-font">
+  <button class="one">Recharge</button>
+  <button class="two">Withdraw</button>
+  <p class="three">Account Balance</p>
+  <p class="four">Total Income</p>
+  <h3 class="five">567</h3>
+  <h3 class="six">987</h3>
+  </div>
+  </div>
+  
+  <div class="card">
+     <a href="user_team.html"><img src="banner.png" alt="reffer your friend and earn reward" style="width: 100%; margin-top: 0px; height: auto;" /></div</a>
+  </div>
+      <!-- end slider section -->
+      <!-- wallet -->
+      <div class="wallet mb-3 mt-4">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-3">
+                      <a href="/recharge/">
+                          <div id="wa_hover" class="wallet_box text_align_center">
+                              <i class="fa fa-wallet"></i>
+                              <h4 class="mt-2" style="color: black;
+                              ">Recharge</h4>
+                          </div>
+                      </a>
+  
+                  </div>
+                  <div class="col-3">
+                      <a href="/withdraw/">
+                          <div id="wa_hover" class="wallet_box text_align_center">
+                              <i class="fa fa-unlock-alt"></i>
+                              <h4 class="mt-2" style="color: black;
+                              ">Withdraw</h4>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-3">
+                      <a href="/bill/">
+                          <div id="wa_hover" class="wallet_box text_align_center">
+                              <i class="fa fa-money-bill-trend-up"></i>
+                              <h4 class="mt-2" style="color: black;
+                              ">Bill </h4>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-3">
+                      <a href="/user_team/">
+                          <div id="wa_hover" class="wallet_box text_align_center">
+                              <i class="fa fa-clipboard"></i>
+                              <h4 class="mt-2" style="color: black;
+                              ">Invite</h4>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- end wallet -->
+    </body>
+  </html>
+     
